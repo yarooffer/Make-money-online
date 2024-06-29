@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer cell</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul li{
+    list-style-type: none;
+}
+a{
+text-decoration: none;
+}
+body{
+    background-color: #F0F1F3;
+}
+/* ---------------------------------------------Navbar Design---------------------------------- */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .3rem 5rem;
+    background-image: url(image/navBG.jpg);
+    background-size: cover;
+    border-bottom: 2px solid #f7a000;
+}
+.nav-left-site-flex{
+    display: flex;
+    align-items: center;
+}
+.nav-list ul li{
+    display: inline-block;
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    padding: 0 1rem;
+    position: relative;
+}
+.nav-list ul li:nth-child(3)::after{
+    content: "new";
+    position: absolute;
+    top: -0.5rem;
+    font-size: 10px;
+    font-weight: 900;
+    background-color: #f7ca00;
+    padding: 0 5px 1px 5px;
+    border-radius: 100vw;
+}
+.balence{
+    width: 1.8rem;  
+}
+.balence-border{
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(85, 85, 85);
+    padding: .2rem .7rem .2rem .5rem;
+    border-radius: 100vw;
+    margin: 0 1.5rem 0 5rem;
+}
+.user{
+    width: 2rem;
+}
+.logo{
+    width: 15rem;
+}
+.nav-left-site-flex p:nth-child(1){
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 800;
+    font-size: 23px;
+    color: rgb(0, 211, 0);
+    text-shadow: 3px 4px 3px #505050;
+}
+.parcent{
+    color: #202020;
+}
+.coin-num{
+    color: #272727;
+    font-weight: 900;
+    font-size: 18px;
+    margin-left: .2rem;
+    
+}
+/* ---------------------------------------------Navbar Design---------------------------------- */
+
+.heading-title{
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    color: #363636;
+    font-weight: 500;
+    margin: 2rem 5rem;
+}
+.heading-title i{
+    margin: 0 .5rem;
+    color: #f75b00;
+}
+.offer-flex-box{
+    display: flex;
+    justify-content: center;
+}
+.offer-container{
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+}
+.offer-head-flex{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 5rem;
+}
+.padding{
+    padding: 1rem 5rem;
+}
+.offer-head-flex div img{
+    width: 6rem;
+    border-radius: 5px;
+}
+.product-name{
+    font-size: 23px;
+}
+.affilyet-method{
+    font-size: 15px;
+    font-weight: 500;
+    padding: .3rem 0 0 0;
+}
+.product-name-in-details{
+    font-weight: 600;
+    font-size: 20px;
+    color: #363636;
+}
+.like-as-tag{
+    margin: 1rem 0;
+}
+.like-as-tag span{
+    padding: 5px 10px;
+    background-color: #f7ca00;
+    margin: 0 .3rem;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+}
+.like-as-tag span i{
+    margin: 0 5px 0 0;
+}
+.like-as-tag span:nth-child(1){
+    margin: 0 0 0 3.5rem;
+}
+.like-as-tag span:nth-child(1) , .like-as-tag span:nth-child(5){
+    background-color: #bafcce;
+    color: #1e7740;
+}
+.like-as-tag span:nth-child(2) , .like-as-tag span:nth-child(3){
+    background-color: #F1F5F9;
+    color: #1E293B;
+}
+.like-as-tag span:nth-child(4){
+    background-color: #A9D8FE;
+    color: #0059FF;
+}
+.todo p{
+    font-size: 18px;
+    color: #ff483e;
+    font-family: "Rubik", sans-serif;
+}
+.todo ul{
+    margin: .5rem 0 1rem 1.5rem;
+    color: #363636;
+    font-size: 14px;
+}
+.todo ul li span{
+    color: #0153FF;
+    text-decoration: underline;
+}
+.install-btn{
+    text-align: right;
+}
+.install-btn p{
+margin: 2rem 0 1rem 0;
+}
+.install-btn p a{
+    background-color: #BAFCCE;
+    color: #1e7740;
+    padding: 7px 50px;
+    border-radius: 5px;
+    border: 2px solid green;
+}
+.footer p{
+    text-align: center;
+    color: #363636;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #0092D8;
+    padding: .7rem 0;
+    margin: 5rem 0 0 0;
+    width: 100%;
+}
+.footer p span{
+    margin: 0 .7rem;
+}
+
+
+@media (max-width:600px) {
+    .logo{
+        width: 8rem;
+    }
+    nav{
+        padding: .5rem .5rem;
+    }
+    .nav-list ul li{
+        display: none;
+    }
+    .nav-left-site-flex p:nth-child(1){
+        font-size: 17px;
+    }
+    .balence-border{
+        padding: 0.1rem .7rem 0.1rem .5rem;
+        margin: 0 .8rem;
+    }
+    .balence{
+        width: 1rem;
+    }
+    .coin-num{
+        font-size: 16px;
+    }
+    .user{
+        width: 2rem;
+        margin: .23rem 0 0 0;
+    }
+    .heading-title{
+        margin: 1rem;
+        font-size: 14px
+    }
+    .offer-container{
+       width: 20rem;
+    }
+    .offer-head-flex div img{
+        width: 4rem;
+    }
+    .offer-head-flex{
+        padding: 1rem;
+    }
+    .padding{
+        padding: 1rem;
+    }
+    .offer-head-flex div img{
+        width: 4rem;
+    }
+    .product-name{
+        font-size: 18px;
+    }
+    .affilyet-method{
+        font-size: 12px;
+        font-weight: 500;
+        padding: .3rem 0 0 0;
+    }
+    .like-as-tag{
+        margin: 1rem 0;
+        display: flex;
+    }
+    .like-as-tag span{
+        padding: 4px 6px;
+        margin: 0 .2rem;
+        border-radius: 3px;
+        font-size: 6px;
+    }    
+    .like-as-tag span:nth-child(1){
+        margin: 0 ;
+    }
+    .todo p{
+        font-size: 16px;
+    }
+    .todo ul{
+        font-size: 11px;
+    }
+    ul li{
+        list-style-type: square;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- ---------------------------------------------Navbar Design---------------------------------- -->
+    <div class="nav-container">
+        <nav>
+            <div><img src="logo.png" alt="Logo" class="logo"></div>
+            <div class="nav-list">
+                <ul>
+                    <li>Home</li>
+                    <li>Find Job</li>
+                    <li>Offer</li>
+                </ul>
+            </div>
+            <div class="nav-left-site-flex">
+                <p>GET <span class="parcent">20%</span> OFF</p>
+                <p class="balence-border"><img src="coin.png" alt="Balence" class="balence"><span class="coin-num">0</span></p>
+                <p><img src="user.png" alt="User" class="user"></p>
+            </div>
+        </nav>
+    </div>
+    <!-- ---------------------------------------------Navbar Design---------------------------------- -->
+
+    <p class="heading-title"><i class="fa-brands fa-slack"></i>Install App and Get reword</p>
+    <div class="offer-flex-box">
+        <div class="offer-container">
+            <div class="offer-head-flex">
+                <div><img src="8uJWU.jpg" alt="Product"></div>
+                <div class="product-details">
+                    <p class="product-name">StockGrow IN ANDROID Easy Download</p>
+                    <p class="affilyet-method">Install App</p>
+                </div>
+            </div>
+            <hr>
+            <div class="padding">
+                <p class="product-name-in-details">StockGrow IN ANDROID</p>
+                <div class="like-as-tag">
+                    <span><i class="fa-solid fa-play"></i>Active</span>
+                    <span><i class="fa-brands fa-android"></i>Android Only</span>
+                    <span><i class="fa-solid fa-earth-americas"></i>India Only</span>
+                    <span><i class="fa-solid fa-hand-holding-dollar"></i>0.03</span>
+                    <span>Fast Pay</span>
+                </div>
+                <div class="todo">
+                    <p>Task to do:</p>
+                    <ul>
+                        <li>Click on Install Button.</li>
+                        <li>Install the App on your Android device and open the App,  take a screen-shot of your Dashboard.</li>
+                        <li>Submit the Screen-shot as Proof.</li>
+                    </ul>
+                </div>
+                <div class="todo">
+                    <p>Requirements:</p>
+                    <ul>
+                        <li>This task is only for these countries: India.</li>
+                        <li>This task is only for these devices: Any Android device.</li>
+                        <li>User can not complete this task multiple time.</li>
+                        <li>VPN / Proxy traffic is not allowed.</li>
+                    </ul>
+                </div>
+                <div class="todo">
+                    <p>Payout:</p>
+                    <ul>
+                        <li>You will earn $0.03 USD when a you completes the task.</li>
+                        <li>Amount will be available in you <span>SproutGigs</span> balance.</li>
+                    </ul>
+                </div>
+                <div class="install-btn">
+                    <p>
+                        <a href="https://www.lnksforyou.com/view.php?id=5537013&pub=2999564" target="_blank">Install</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>
+            <span>License</span>
+            <span>Terms of Service</span>
+            <span>Privacy Policy</span>
+            <span>Refunds</span>
+            <span>Cookie preferences</span>
+        </p>
+    </div>
+
+
+    <script>
+        window.addEventListener('load',() => {
+            let countElement = document.querySelector('.coin-num');
+            let balence = Number();
+
+            function reduse() {
+                let result = balence + 1;
+                balence = result;
+                countElement.innerHTML = balence + "€";
+                if(balence === 0){clearInterval(balanceInterval)};
+            }
+             let balanceInterval = setInterval(reduse, 60000);
+        });
+    </script>
+</body>
+</html>
